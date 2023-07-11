@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", "Lexend Deca", sans-serif;
+}
+
+body {
+  padding: 3rem;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: hsl(244, 38%, 16%);
+  max-width: 37.5rem;
+  border-radius: 11px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile img {
+  width: 100%;
+  border-radius: 11px 11px 0 0;
+}
+.img-container {
+  position: relative;
+}
+
+.img-container::after {
+  content: "";
+  background-color: hsl(277, 64%, 61%);
+  inset: 0;
+  position: absolute;
+  opacity: 55%;
+  border-radius: 11px 11px 0 0;
+}
+
+.heading {
+  margin: 2rem;
+}
+
+.head {
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 2rem;
+}
+
+span {
+  color: hsl(277, 64%, 61%);
+}
+
+.text {
+  text-align: center;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 1.5rem;
+}
+
+.bottom {
+  text-align: center;
+  margin: 2rem;
+}
+
+.text1 {
+  margin-bottom: 2rem;
+}
+.text2 {
+  margin-bottom: 2rem;
+}
+
+.bhead {
+  font-weight: 700;
+  font-size: 2.8rem;
+  /* text-align: center; */
+  color: hsl(0, 0%, 100%);
+  /* margin-bottom: 2rem; */
+}
+
+.btext {
+  /* text-align: center; */
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .container {
+    max-width: 1040px;
+    /* height: 100%; */
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+    max-width: 100%;
+  }
+  .desktop img {
+    width: 100%;
+    aspect-ratio: initial;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border-radius: 0 11px 11px 0;
+  }
+  .heading {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 6rem;
+  }
+  .head {
+    font-size: 3.2rem;
+    text-align: left;
+  }
+  .text {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .bottom {
+    margin: 5rem 0 0 0;
+    display: flex;
+    text-align: left;
+    gap: 3rem;
+  }
+  .bhead {
+    font-size: 3rem;
+  }
+  .btext {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  .img-container {
+    position: relative;
+  }
+
+  .img-container::after {
+    content: "";
+    background-color: hsl(277, 64%, 61%);
+    inset: 0;
+    position: absolute;
+    opacity: 55%;
+    border-radius: 0 11px 11px 0;
+  }
+}
